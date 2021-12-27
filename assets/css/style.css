@@ -73,7 +73,6 @@ header nav ul li a:hover {
 .content {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .content h2 {
@@ -104,6 +103,8 @@ header nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  width: fit-content;
+  position: static;
 }
 
 .projects h2 {
@@ -111,9 +112,46 @@ header nav ul li a:hover {
   padding: 0 10px 500px 5px;
 }
 
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.grid-item {
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid #2376f3;
+  background-image: url(/assets/images/hero-img.svg);
+  margin: 10px;
+}
+
+.grid-item h3 {
+  font-size: 30px;
+  color: #2376f3;
+  background-color: white;
+}
+
+.first-item {
+  padding: 400px 300px 0 0;
+}
+
+.secondary-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
 .contact {
   display: flex;
   margin-bottom: 20px;
+  position: static;
 }
 
 .contact h2 {
@@ -157,6 +195,29 @@ header nav ul li a:hover {
     font-size: 25px;
     padding: 0;
   }
+
+  .grid-item {
+    border: 1px solid #2376f3;
+    margin: 5px;
+  }
+
+  .grid-item h3 {
+    font-size: 40px;
+  }
+
+  .first-item {
+    padding: 300px 0 0 0;
+  }
+
+  .secondary-item {
+    display: grid;
+    grid-gap: 5px;
+  }
+
+  .secondary-item h3 {
+    font-size: 20px;
+    margin: 20px 0 0 0;
+  }
 }
 
 /*  Smartphones in landscape mode */
@@ -194,10 +255,33 @@ header nav ul li a:hover {
   }
 
   .projects h2 {
-    font-size: 35px;
+    font-size: 25px;
     margin-left: 5px;
-    padding-right: 5px;
     border-right: 1px solid #2376f3;
+    padding: 0 10px 10px 5px;
+  }
+
+  .grid-item {
+    border: 1px solid #2376f3;
+    margin: 5px;
+  }
+
+  .grid-item h3 {
+    font-size: 30px;
+  }
+
+  .first-item {
+    padding: 100px 0 0 0;
+  }
+
+  .secondary-item {
+    display: grid;
+    grid-gap: 5px;
+  }
+
+  .secondary-item h3 {
+    font-size: 20px;
+    margin: 20px 0 0 0;
   }
 
   .contact h2 {
@@ -256,8 +340,31 @@ header nav ul li a:hover {
   .projects h2 {
     font-size: 25px;
     margin-left: 5px;
-    padding-right: 5px;
     border-right: 1px solid #2376f3;
+    padding: 0 10px 10px 5px;
+  }
+
+  .grid-item {
+    border: 1px solid #2376f3;
+    margin: 5px;
+  }
+
+  .grid-item h3 {
+    font-size: 20px;
+  }
+
+  .first-item {
+    padding: 100px 0 0 0;
+  }
+
+  .secondary-item {
+    display: grid;
+    grid-gap: 5px;
+  }
+
+  .secondary-item h3 {
+    font-size: 20px;
+    margin: 20px 0 0 0;
   }
 
   .contact h2 {
