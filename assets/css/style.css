@@ -8,7 +8,6 @@
 }
 
 body {
-  background-color: yellow;
   font-family: "Poppins", sans-serif;
 }
 
@@ -54,7 +53,7 @@ header nav ul li a:hover {
 }
 
 .hero {
-  background-image: url(/assets/images/hero-img.svg);
+  background-image: url(../images/hero-img.svg);
   background-size: cover;
   background-attachment: fixed;
   padding: 80px 10px 20px 0;
@@ -137,7 +136,7 @@ header nav ul li a:hover {
 
 .run-buddy {
   display: flex;
-  background-image: url(/assets/images/run-buddy.png);
+  background-image: url(../images/run-buddy.png);
   background-size: cover;
   grid-area: a;
   border: 5px solid #2376f3;
@@ -160,7 +159,7 @@ header nav ul li a:hover {
 }
 
 .horiseon {
-  background-image: url(/assets/images/horiseon.png);
+  background-image: url(../images/horiseon.png);
   background-size: cover;
   grid-area: b;
   display: flex;
@@ -168,7 +167,7 @@ header nav ul li a:hover {
 }
 
 .robots {
-  background-image: url(/assets/images/robots.png);
+  background-image: url(../images/robots.png);
   background-size: cover;
   grid-area: c;
   display: flex;
@@ -176,7 +175,7 @@ header nav ul li a:hover {
 }
 
 .password {
-  background-image: url(/assets/images/Placeholder.svg);
+  background-image: url(../images/Placeholder.svg);
   background-size: cover;
   grid-area: d;
   display: flex;
@@ -184,7 +183,7 @@ header nav ul li a:hover {
 }
 
 .quiz {
-  background-image: url(/assets/images/Placeholder.svg);
+  background-image: url(../images/Placeholder.svg);
   background-size: cover;
   grid-area: e;
   display: flex;
@@ -371,7 +370,7 @@ footer {
 
   .grid-work {
     grid-auto-rows: 100px;
-    grid-auto-columns: 100px;
+    grid-auto-columns: 70px;
     gap: 5px;
     padding: 5px;
   }
