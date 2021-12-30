@@ -1,4 +1,6 @@
+/* only 1 var for the color */
 :root {
+  --color1: #2376f3;
 }
 
 * {
@@ -7,8 +9,10 @@
   box-sizing: content-box;
 }
 
+/* simple background-color */
 body {
   font-family: "Poppins", sans-serif;
+  background-color: black;
 }
 
 header {
@@ -21,7 +25,7 @@ header {
 
 header div h1 {
   font-size: 60px;
-  color: #2376f3;
+  color: var(--color1);
   margin: 10px 10px 10px 0;
   padding: 5px 5px 5px 80px;
   border-radius: 0 15px 15px 0;
@@ -39,19 +43,21 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #2376f3;
+  color: var(--color1);
   text-decoration: none;
   font-size: 30px;
-  border-bottom: 5px solid #2376f3;
+  border-bottom: 5px solid var(--color1);
   margin: 10px;
   padding: 10px 15px;
 }
 
-header nav ul li a:hover {
+/* add hover for nav and footer items*/
+header nav ul li a:hover, .info a:hover {
   background: white;
   text-shadow: none;
 }
 
+/* .svg image background */
 .hero {
   background-image: url(../images/hero-img.svg);
   background-size: cover;
@@ -60,8 +66,8 @@ header nav ul li a:hover {
 }
 
 .hero h2 {
-  color: #2376f3;
-  background: white;
+  color: var(--color1);
+  background: black;
   font-size: 40px;
   float: right;
   margin: 200px 50px 0 0;
@@ -78,22 +84,22 @@ header nav ul li a:hover {
   justify-content: space-around;
   margin: 5px;
   padding: 5px;
-  color: #2376f3;
+  color: var(--color1);
 }
 
 .main-content h2 {
-  border-right: 5px solid #2376f3;
+  font-size: 40px;
+  border-right: 5px solid var(--color1);
   margin: 10px;
   padding: 10px;
 }
 
 .about-me {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .about-me h2 {
-  font-size: 40px;
   display: flex;
   text-align: end;
 }
@@ -102,27 +108,23 @@ header nav ul li a:hover {
   font-size: 25px;
   margin: auto;
   padding: 10px;
-  color: #2376f3;
+  color: var(--color1);
   width: 80vw;
 }
 
-.projects {
-  display: flex;
-}
-
 .projects h2 {
-  display: flex;
-  font-size: 40px;
   text-align: end;
+  padding-bottom: 1100px;
 }
 
+/* first time trying grid */
 .grid-work {
   display: grid;
   grid-template-areas:
-    "a a a a"
-    "a a a a"
-    "b b c c"
-    "d d e e";
+    "f a a a a"
+    "f a a a a"
+    "f b b c c"
+    "f d d e e";
   grid-auto-rows: 280px;
   grid-auto-columns: 280px;
   gap: 10px;
@@ -142,13 +144,12 @@ header nav ul li a:hover {
   background-image: url(../images/run-buddy.png);
   background-size: cover;
   grid-area: a;
-  border: 5px solid #2376f3;
 }
 
 .grid-work a {
   text-decoration: none;
   display: flex;
-  color: #2376f3;
+  color: var(--color1);
 }
 
 .grid-work h3 {
@@ -166,7 +167,6 @@ header nav ul li a:hover {
   background-size: cover;
   grid-area: b;
   display: flex;
-  border: 5px solid #2376f3;
 }
 
 .robots {
@@ -174,7 +174,6 @@ header nav ul li a:hover {
   background-size: cover;
   grid-area: c;
   display: flex;
-  border: 5px solid #2376f3;
 }
 
 .password {
@@ -182,7 +181,6 @@ header nav ul li a:hover {
   background-size: cover;
   grid-area: d;
   display: flex;
-  border: 5px solid #2376f3;
 }
 
 .quiz {
@@ -190,38 +188,36 @@ header nav ul li a:hover {
   background-size: cover;
   grid-area: e;
   display: flex;
-  border: 5px solid #2376f3;
 }
 
-footer {
+footer .contact {
   display: flex;
   justify-content: space-between;
-  color: #2376f3;
+  color: var(--color1);
   width: 80vw;
 }
 
-.contact h2 {
+.info h2 {
   font-size: 40px;
+  color: var(--color1);
   display: flex;
-  text-align: end;
   margin: 10px;
   padding: 10px;
-  border-right: 5px solid #2376f3;
+  border-right: 5px solid var(--color1);
 }
 
 .info {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-between;
 }
 
 .info a {
   font-size: 20px;
   text-decoration: none;
-  color: #2376f3;
-  border-bottom: 5px solid #2376f3;
-  margin: 5px 20px;
+  color: var(--color1);
+  border-bottom: 5px solid var(--color1);
+  margin: auto;
 }
 
 /*  Tablets in landscape mode, older desktop monitors */
@@ -233,11 +229,31 @@ footer {
     font-size: 0 100px;
   }
 
+  .about-me h2 {
+    font-size: 30px;
+  }
+
   .grid-work {
     grid-auto-rows: 160px;
     grid-auto-columns: 170px;
     gap: 5px;
     padding: 5px;
+  }
+
+  .grid-work h3 {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: 10px;
+  }
+
+  .grid-work h2 {
+    font-size: 30px;
+    padding-bottom: 600px;
+  }
+
+  .info h2 {
+    font-size: 30px;
   }
 }
 
@@ -255,6 +271,28 @@ footer {
     grid-auto-columns: 130px;
     gap: 5px;
     padding: 5px;
+  }
+
+  /* turn text vertical */
+  .grid-work h2 {
+    font-size: 30px;
+    padding-bottom: 400px;
+    writing-mode: vertical-rl;
+  }
+
+  .grid-work h3 {
+    font-size: 20px;
+    padding: 5px;
+    margin-top: auto;
+    margin-bottom: 5px;
+  }
+
+  .about-me h2 {
+    font-size: 30px;
+  }
+
+  .info h2 {
+    font-size: 30px;
   }
 }
 
@@ -276,7 +314,7 @@ footer {
 
   header nav ul li a {
     font-size: 20px;
-    border-bottom: 5px solid #2376f3;
+    border-bottom: 5px solid var(--color1);
   }
 
   .hero {
@@ -300,7 +338,9 @@ footer {
 
   .about-me p {
     font-size: 20px;
-    width: fit-content;
+  }
+
+  .projects {
   }
 
   .contact h2 {
@@ -309,9 +349,15 @@ footer {
 
   .grid-work {
     grid-auto-rows: 110px;
-    grid-auto-columns: 100px;
+    grid-auto-columns: 90px;
     gap: 5px;
     padding: 5px;
+  }
+
+  .grid-work h2 {
+    font-size: 30px;
+    padding-bottom: 350px;
+    writing-mode: vertical-rl;
   }
 
   .grid-work h3 {
@@ -326,8 +372,15 @@ footer {
     font-size: 15px;
   }
 
-  footer {
-    width: 100vw;
+  .info {
+    flex-direction: column;
+    padding: 5%;
+  }
+
+  .info h2 {
+    border-bottom: 5px solid var(--color1);
+    border-right: none;
+    justify-content: center;
   }
 
   .info a {
@@ -360,7 +413,7 @@ footer {
   header nav ul li a {
     font-size: 18px;
     padding: 0;
-    border-bottom: 1px solid #2376f3;
+    border-bottom: 1px solid var(--color1);
   }
 
   .hero {
@@ -398,6 +451,12 @@ footer {
     padding: 5px;
   }
 
+  .grid-work h2 {
+    font-size: 20px;
+    padding-bottom: 280px;
+    writing-mode: vertical-rl;
+  }
+
   .grid-work h3 {
     font-size: 20px;
     padding: 0;
@@ -406,17 +465,22 @@ footer {
   }
 
   .password h3,
-  quiz h3 {
+  .quiz h3 {
     font-size: 15px;
   }
 
-  .projects h2 {
-    border-right: none;
-    padding: 0;
+  .grid-work h2 {
+    font-size: 30px;
   }
 
-  footer {
-    width: 100vw;
+  .info {
+    flex-direction: column;
+  }
+
+  .info h2 {
+    border-bottom: 5px solid var(--color1);
+    border-right: none;
+    justify-content: center;
   }
 
   .info a {
