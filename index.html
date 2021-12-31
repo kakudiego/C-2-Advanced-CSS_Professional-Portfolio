@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Using CSS Grid</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="preconnect" href="http://fonts.googleapis" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -8,78 +10,83 @@
     <title>Diego Kaku Full Stack Web Developer</title>
   </head>
   <body>
-    <header>
-      <div>
-        <h1>Diego Kaku</h1>
-      </div>
-      <nav>
+    <section class="content">
+      <header class="header">
         <div>
-          <ul>
-            <li>
-              <a href="#about-me">About Me</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
+          <h1>Diego Kaku</h1>
         </div>
-      </nav>
-    </header>
-    <section class="hero">
-      <h2>Full Stack Web Developer</h2>
-      <img src="./assets/images/photo.jpg" alt="Photo of Diego Kaku"/>
-    </section>
-    <section class="main-content">
+        <nav>
+          <div>
+            <ul>
+              <li>
+                <a href="#about-me">About Me</a>
+              </li>
+              <li>
+                <a href="#work">Work</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div id="work" class="work">
+        <h2>Work</h2>
+      </div>
+      <section class="hero">
+        <img src="./assets/images/photo.jpg" alt="Photo of Diego Kaku" />
+        <h2>Full Stack Web Developer</h2>
+      </section>
       <section id="about-me" class="about-me">
         <h2>About Me</h2>
-        <p>Hello. <br/>
-          My name is Diego Kaku. <br/>
-          I'm a Full Stack Web Developer, currently in training at the University of Minnesota Boot Camp. <br/>
-          My background is Nursing and Medicine, and I'm fluent in three languages: Portuguese, Spanish and English.
+        <p>
+          Hello, My name is Diego Kaku. <br />
+          I'm a Full Stack Web Developer, currently in training at the
+          University of Minnesota Boot Camp. <br />
+          My background is Nursing and Medicine, and I'm fluent in three
+          languages: Portuguese, Spanish and English.
         </p>
       </section>
-      <section id="projects" class="grid-work">
-        <div class="projects">
-          <h2>Projects</h2>
-        </div>
-        <div class="run-buddy">
-          <a href="https://github.com/kakudiego/run-buddy" target="_blank">
-            <h3>Run Buddy</h3>
-          </a>
-        </div>
-        <div class="horiseon">
-          <a href="https://github.com/kakudiego/C-1-HTML-CSS-Git_Code-Refactor" target="_blank">
-            <h3>Refactor</h3>
-          </a>
-        </div>
-        <div class="robots">
-          <a href="https://github.com/kakudiego" target="_blank">
-            <h3>Robot Gladiators</h3>
-          </a>
-        </div>
-        <div class="password">
-          <a href="https://github.com/kakudiego" target="_blank">
-            <h3>Password Generator</h3>
-          </a>
-        </div>
-        <div class="quiz">
-          <a href="https://github.com/kakudiego" target="_blank">
-            <h3>Web API Code Quiz</h3>
-          </a>
-        </div>
-      </section>
-    </section>
-    <footer id="contact" class="contact">
-      <div class="info">
+      <div class="run-buddy">
+        <h3>Run Buddy</h3>
+        <a href="https://github.com/kakudiego/run-buddy" target="_blank"
+          ><img src="./assets/images/run-buddy.png" alt="" />
+        </a>
+      </div>
+      <div class="refactor">
+        <h3>Refactor</h3>
+        <a
+          href="https://github.com/kakudiego/C-1-HTML-CSS-Git_Code-Refactor"
+          target="_blank"
+          ><img src="./assets/images/horiseon.png" alt="" />
+        </a>
+      </div>
+      <div class="robots">
+        <h3>Robot Gladiators</h3>
+        <a href="https://github.com/kakudiego" target="_blank"
+          ><img src="./assets/images/Placeholder.svg" alt="" />
+        </a>
+      </div>
+      <div class="password">
+        <h3>Password Generator</h3>
+        <a href="https://github.com/kakudiego" target="_blank"
+          ><img src="./assets/images/Placeholder.svg" alt="" />
+        </a>
+      </div>
+      <div class="quiz">
+        <h3>Web API Code Quiz</h3>
+        <a href="https://github.com/kakudiego" target="_blank"
+          ><img src="./assets/images/Placeholder.svg" alt="" />
+        </a>
+      </div>
+      <footer id="contact" class="footer">
         <h2>Contact Me</h2>
         <a href="https://github.com/kakudiego" target="_blank">GitHub</a>
         <a href="mailto:diegokaku@gmail.com">diegokaku@gmail.com</a>
-        <a href="callto:962-926-4037">952-926-4037</a>
         <a href="https://twitter.com/kakudiego" target="_blank">Twitter</a>
-      </div>
-    </footer>
+        <a href="callto:962-926-4037">952-926-4037</a>
+      </footer>
+    </section>
   </body>
 </html>
