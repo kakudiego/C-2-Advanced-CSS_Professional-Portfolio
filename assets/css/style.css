@@ -10,6 +10,7 @@ body {
   gap: 10px;
   grid-auto-columns: auto;
   align-content: center;
+  box-sizing: border-box;
 }
 
 .header {
@@ -31,6 +32,7 @@ body {
 .header li {
   display: inline;
   padding: 10px;
+  text-decoration: none;
 }
 
 .header a {
@@ -63,7 +65,7 @@ body {
 
 .hero h2 {
   align-self: flex-end;
-  font-size: calc(25px + 0.55vw);
+  font-size: calc(20px + 0.55vw);
   background: #3bbced;
   padding: 0 30px 0 15px;
   border-radius: 15px 0 0 15px;
@@ -84,13 +86,15 @@ body {
   background: #ffff00;
   padding-right: 10px;
   border-radius: 0 15px 15px 0;
+  margin: 0;
 }
 
 .about-me p {
   font-size: calc(16px + 0.55vw);
   color: #ffff00;
   text-shadow: 1px 1px 5px black;
-  margin: auto;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .work {
@@ -116,10 +120,11 @@ body {
   grid-auto-rows: 2fr;
   width: auto;
   position: relative;
+  justify-self: center;
 }
 
 .content h3 {
-  font-size: 30px;
+  font-size: calc(25px + 0.55vw);
   background: #ffff00;
   padding: 0 15px;
   border-radius: 0 15px 15px 0;
@@ -140,13 +145,6 @@ body {
   position: relative;
 }
 
-.img-size img {
-  width: 400px;
-  height: 150px;
-  border-radius: 15px;
-  box-shadow: 1px 1px 10px black;
-}
-
 .robots {
   grid-row: 6;
   grid-column: 3;
@@ -165,6 +163,17 @@ body {
   position: relative;
 }
 
+.img-size {
+  justify-self: center;
+}
+
+.img-size img {
+  width: 400px;
+  height: 150px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px black;
+}
+
 .footer {
   display: flex;
   grid-column: span 4;
@@ -173,7 +182,7 @@ body {
 
 .footer a {
   text-decoration: none;
-  font-size: 30px;
+  font-size: calc(16px + 0.55vw);
   color: #ffff00;
   text-shadow: 1px 1px 5px black;
   align-self: center;
@@ -186,28 +195,141 @@ body {
 }
 
 /* media query */
+@media only screen and (max-width: 2560px) and (min-width: 300px) {
+  * {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 320px) {
-  ...;
+@media only screen and (min-width: 320px) {
+  .header h1 {
+    font-size: calc(20px + 0.55vw);
+    padding: 0 10px 0 40px;
+    margin: 0 auto;
+  }
+
+  .header ul {
+    display: inline;
+    padding: 0;
+  }
+
+  .header a {
+    font-size: calc(10px + 0.55vw);
+    padding: 0;
+  }
+
+  .hero h2 {
+    font-size: calc(10px + 0.55vw);
+  }
+
+  .about-me p {
+    font-size: calc(10px + 0.55vw);
+  }
+
+  .side-h2 h2 {
+    font-size: calc(15px + 0.55vw);
+  }
+
+  .content h3 {
+    font-size: calc(10px + 0.55vw);
+    padding: 0;
+    bottom: 1px;
+  }
+
+  .run-buddy img {
+    width: 280px;
+  }
+
+  .img-size img {
+    width: 130px;
+    height: 60px;
+  }
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 480px) {
-  ...;
+@media only screen and (min-width: 425px) {
+  .hero h2 {
+    font-size: calc(10px + 0.55vw);
+  }
+
+  .header h1 {
+    font-size: calc(25px + 0.55vw);
+    padding: 0 10px 0 40px;
+    margin: 0 auto;
+  }
+
+  .header ul {
+    display: inline;
+    padding: 0;
+  }
+
+  .header a {
+    font-size: calc(15px + 0.55vw);
+    padding: 0;
+  }
+
+  .side-h2 h2 {
+    font-size: calc(20px + 0.55vw);
+  }
+
+  .content h3 {
+    font-size: calc(15px + 0.55vw);
+  }
+
+  .run-buddy img {
+    width: 350px;
+  }
+
+  .img-size img {
+    width: 170px;
+    height: 80px;
+  }
 }
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  ...;
+  .header h1 {
+    font-size: calc(30px + 0.55vw);
+    padding: 0 10px 0 40px;
+  }
+
+  .side-h2 h2 {
+    font-size: calc(25px + 0.55vw);
+  }
+
+  .content h3 {
+    font-size: calc(20px + 0.55vw);
+  }
+
+  .run-buddy img {
+    width: 600px;
+  }
+
+  .img-size img {
+    width: 300px;
+    height: 120px;
+  }
 }
-/* Large devices (laptops/desktops, 992px and up) */
+
+/* Large devices (laptops/desktops, 1024px and up) */
 @media only screen and (min-width: 1024px) {
-  .about-me p {
-    padding: 0 20px;
+  .header a {
+    font-size: calc(20px + 0.55vw);
+  }
+
+  .run-buddy img {
+    width: 800px;
   }
 
   .img-size img {
     width: 395px;
   }
 }
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .run-buddy img {
@@ -217,5 +339,17 @@ body {
   .img-size img {
     width: 470px;
     height: 150px;
+  }
+}
+
+/* 4k devices */
+@media only screen and (min-width: 2000px) {
+  .run-buddy img {
+    width: 1600px;
+  }
+
+  .img-size img {
+    width: 600px;
+    height: 250px;
   }
 }
