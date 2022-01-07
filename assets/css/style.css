@@ -125,6 +125,7 @@ body {
 }
 
 .content h3 {
+  color: black;
   font-size: calc(25px + 0.55vw);
   background: #ffff00;
   padding: 0 15px;
@@ -196,7 +197,7 @@ body {
 }
 
 /* media query */
-@media only screen and (max-width: 2560px) and (min-width: 300px) {
+@media only screen and (max-width: 3000px) {
   * {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -205,12 +206,22 @@ body {
   }
 }
 
-/* Extra small devices (phones, 320px and down) */
+/* Extra small devices (phones, 320px and up) */
 @media only screen and (min-width: 320px) {
+  .content {
+    display: block;
+    padding: 10px 0;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
   .header h1 {
-    font-size: calc(20px + 0.55vw);
-    padding: 0 10px 0 40px;
+    font-size: calc(30px + 0.55vw);
+    padding: 0 10px;
     margin: 0 auto;
+    border-radius: 15px;
   }
 
   .header ul {
@@ -219,48 +230,73 @@ body {
   }
 
   .header a {
-    font-size: calc(10px + 0.55vw);
+    font-size: calc(20px + 0.55vw);
     padding: 0;
   }
 
   .hero h2 {
-    font-size: calc(10px + 0.55vw);
-  }
-
-  .about-me p {
-    font-size: calc(14px + 0.55vw);
-  }
-
-  .side-h2 h2 {
     font-size: calc(15px + 0.55vw);
   }
 
+  .hero img {
+    width: 20%;
+  }
+
+  .refactor,
+  .robots,
+  .password,
+  .quiz {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-me p {
+    font-size: calc(16px + 0.55vw);
+  }
+
+  .side-h2 h2 {
+    font-size: calc(20px + 0.55vw);
+    margin: 10px auto;
+    border-radius: 15px;
+    padding: 0 10px;
+  }
+
   .content h3 {
-    font-size: calc(10px + 0.55vw);
+    font-size: calc(15px + 0.55vw);
     padding: 0;
     bottom: 1px;
   }
 
   .run-buddy img {
-    width: 320px;
+    width: 100%;
   }
 
   .img-size img {
-    width: 150px;
-    height: 60px;
+    width: 300px;
+    height: 80px;
+  }
+
+  footer {
+    flex-direction: column;
   }
 }
 
-/* Small devices (portrait tablets and large phones, 425px and up) */
-@media only screen and (min-width: 425px) {
-  .hero h2 {
-    font-size: calc(10px + 0.55vw);
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .content {
+    display: block;
+    padding: 10px 0;
+  }
+
+  header {
+    flex-direction: column;
   }
 
   .header h1 {
-    font-size: calc(25px + 0.55vw);
-    padding: 0 10px 0 40px;
+    font-size: calc(30px + 0.55vw);
+    padding: 0 10px;
     margin: 0 auto;
+    border-radius: 15px;
   }
 
   .header ul {
@@ -269,102 +305,196 @@ body {
   }
 
   .header a {
-    font-size: calc(15px + 0.55vw);
-    padding: 0;
-  }
-
-  .side-h2 h2 {
     font-size: calc(20px + 0.55vw);
-  }
-
-  .content h3 {
-    font-size: calc(15px + 0.55vw);
     padding: 0;
-    bottom: 5px;
-  }
-
-  .run-buddy img {
-    width: 350px;
-  }
-
-  .img-size img {
-    width: 170px;
-    height: 80px;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .header h1 {
-    font-size: calc(30px + 0.55vw);
-    padding: 0 10px 0 40px;
   }
 
   .hero h2 {
     font-size: calc(15px + 0.55vw);
   }
 
+  .hero img {
+    width: 20%;
+  }
+
+  .refactor,
+  .robots,
+  .password,
+  .quiz {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-me p {
+    font-size: calc(16px + 0.55vw);
+  }
+
   .side-h2 h2 {
     font-size: calc(25px + 0.55vw);
+    margin: 10px auto;
+    border-radius: 15px;
+    padding: 0 10px;
   }
 
   .content h3 {
-    font-size: calc(20px + 0.55vw);
+    font-size: calc(15px + 0.55vw);
+    padding: 0;
+    bottom: 1px;
   }
 
   .run-buddy img {
-    width: 600px;
+    width: 100%;
   }
 
   .img-size img {
-    width: 300px;
+    width: 400px;
     height: 120px;
+  }
+
+  .footer {
+    flex-direction: column;
   }
 }
 
 /* Large devices (laptops/desktops, 1024px and up) */
 @media only screen and (min-width: 1024px) {
+  .content {
+    display: grid;
+  }
+
+  .header {
+    flex-direction: row;
+  }
+
+  .header h1 {
+    font-size: calc(50px + 0.55vw);
+    padding: 0 15px 0 60px;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .header ul {
+    display: inline;
+    padding: 0;
+  }
+
   .header a {
+    font-size: calc(25px + 0.55vw);
+    padding: 0 20px 0 0;
+  }
+
+  .hero h2 {
+    font-size: calc(15px + 0.55vw);
+  }
+
+  .hero img {
+    width: 20%;
+  }
+
+  .about-me {
+    flex-wrap: nowrap;
+  }
+
+  .about-me p {
     font-size: calc(20px + 0.55vw);
   }
 
-  .hero h2 {
-    font-size: calc(15px + 0.55vw);
+  .side-h2 h2 {
+    font-size: calc(30px + 0.55vw);
+    text-align: end;
+    padding-right: 10px;
+    border-radius: 0 15px 15px 0;
+    margin: 0;
+  }
+
+  .content h3 {
+    font-size: calc(20px + 0.55vw);
+    padding: 0;
+    bottom: 1px;
   }
 
   .run-buddy img {
-    width: 800px;
+    width: 100%;
   }
 
   .img-size img {
-    width: 395px;
+    width: 400px;
+    height: 120px;
+  }
+
+  .footer {
+    flex-direction: row;
+  }
+
+  .footer a {
+    font-size: calc(25px + 0.55vw);
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) {
+  .content {
+    display: grid;
+  }
+
+  .header {
+    flex-direction: row;
+  }
+
+  .header h1 {
+    font-size: calc(60px + 0.55vw);
+    padding: 0 15px 0 60px;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .header a {
+    font-size: calc(30px + 0.55vw);
+    padding: 0 20px 0 0;
+  }
+
   .hero h2 {
-    font-size: calc(15px + 0.55vw);
+    font-size: calc(20px + 0.55vw);
+  }
+
+  .hero img {
+    width: 20%;
+  }
+
+  .about-me {
+    flex-wrap: nowrap;
+  }
+
+  .about-me p {
+    font-size: calc(30px + 0.55vw);
+  }
+
+  .side-h2 h2 {
+    font-size: calc(40px + 0.55vw);
+    text-align: end;
+    padding-right: 10px;
+    border-radius: 0 15px 15px 0;
+    margin: 0;
+  }
+
+  .content h3 {
+    font-size: calc(25px + 0.55vw);
+    padding: 0;
+    bottom: 1px;
   }
 
   .run-buddy img {
-    width: 1000px;
+    width: 100%;
   }
 
   .img-size img {
-    width: 470px;
-    height: 150px;
-  }
-}
-
-/* 4k devices */
-@media only screen and (min-width: 2000px) {
-  .run-buddy img {
-    width: 1600px;
+    width: 620px;
+    height: 200px;
   }
 
-  .img-size img {
-    width: 600px;
-    height: 250px;
+  .footer {
+    flex-direction: row;
+  }
+
+  .footer a {
+    font-size: calc(30px + 0.55vw);
   }
 }
