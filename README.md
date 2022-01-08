@@ -5,7 +5,7 @@ Targeted goals:
 - Build a first portfolio without a stater code.
 - Basic layout with name, photo, and links to sections about me, projects, and contact.
 - Working links.
-- Project section with applications photo and link.
+- Project/Work section with applications photo and link.
 - First application presented larger in size than others.
 - Present a responsive layout.
 - Add Comments to HTML and CSS to help understand the structure and layout.
