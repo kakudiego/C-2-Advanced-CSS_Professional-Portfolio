@@ -17,3 +17,7 @@ https://github.com/kakudiego/C-2-Advanced-CSS_Professional-Portfolio
 ## GitHub repository:
 
 https://kakudiego.github.io/C-2-Advanced-CSS_Professional-Portfolio/
+
+## ScreenShots
+
+<img src="./assets/images/portfolio.png">
